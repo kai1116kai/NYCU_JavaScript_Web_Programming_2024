@@ -1,0 +1,296 @@
+body {
+    user-select: none;
+    margin: 0;
+    padding: 0; 
+    min-width: 800px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    background-color: #707070;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f0f0f0;
+    position : fixed;
+    z-index: 5000;
+}
+
+h1 {
+    height: 50px;
+    margin: 10px;
+    padding-left: 10px;
+    line-height: 50px;
+    margin: 0;
+}
+
+.button-container button {
+    height: 50px;
+    width: 100px;
+    margin: 0;
+    background-color: #707070;
+    border: none;
+    color: #f0f0f0;
+}
+
+.button-container button:hover {
+    background-color: #f0f0f0;
+    color: #707070;
+    cursor: pointer;
+}
+
+#left_bar {
+    height: 100vh;
+    width: 150px;
+    position: fixed;
+}
+#right_bar {
+    position: fixed;
+    top: 50px;
+    height: 100vh;
+}
+.lightblue {
+    background-color: lightblue;
+}
+.generator-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: flex-start;
+    width: 150px;
+    /* border: 1px solid black; */
+    padding: 70px 0 0 0;
+}
+
+#coin-container {
+    display: flex;
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.brick {
+    width: 100px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+    background-color: #adadad;
+    /* Gray color for the bricks */
+    border: 1px solid #808080;
+    /* Border color for the bricks */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    /* Add shadow for a 3D effect */
+    text-align: center;
+    line-height: 50px;
+}
+
+.start-brick {
+    position: absolute;
+    left: 170px;
+    top: 70px;
+    font-size: 12px;
+}
+
+.brick::before,
+.brick::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    /* Width of the small rectangles */
+    height: 5px;
+    /* Height of the small rectangles */
+    background-color: #666;
+    /* Color of the small rectangles */
+    top: -6px;
+    /* Position the small rectangles on top */
+    border-radius: 2px;
+    /* Rounded corners for the small rectangles */
+}
+
+.brick::before {
+    left: 10px;
+    /* Position the first small rectangle */
+}
+
+.brick::after {
+    right: 10px;
+    /* Position the second small rectangle */
+}
+
+.gen-brick {
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+#run {
+    width: 150px;
+    height: 80px;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 35px;
+    display: none;
+}
+
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 7% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    width: 40%;
+    height: 50%;
+    min-width: 500px;
+    max-width: 1000px;
+    min-height: 550px;
+    justify-content: center;
+    /* Limit the maximum width of the modal content */
+}
+
+.modal-content button {
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+#init-modal {
+    justify-content: center;
+    text-align: center;
+}
+
+#init-modal h2 {
+    font-size: 40px;
+}
+
+#init-modal p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+
+#init-modal #rules {
+    height: 300px;
+    width: 500px;
+    background: url(./img/rulepage1.png);
+}
+
+#init-modal #rule-but-row {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#init-modal #rule-but-row button {
+    height: 30px;
+    width: 80px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 40px;
+}
+
+#init-modal #start-row {
+    margin-top: 20px;
+}
+
+.but-diff {
+    display: none;
+}
+
+#finish-modal {
+    display: none;
+    justify-content: center;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#finish-modal figure {
+    height: 10%;
+}
+
+img {
+    width: 100%;
+}
+
+.fin-coin-row {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+#fin-coin-container {
+    display: flex;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: rgb(0, 183, 255);
+}
+
+.green {
+    background-color: green;
+}
+
+.brown {
+    background-color: brown;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.colorffcc43 {
+    background-color: #ffcc43;
+}
+
+.color00aaaa {
+    background-color: #00aaaa;
+}
+
+.but_disabled {
+    background-color: #d3d3d3;
+}

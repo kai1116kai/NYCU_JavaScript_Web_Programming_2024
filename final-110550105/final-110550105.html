@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build&Solve</title>
+  <link rel="stylesheet" href="final-110550105.css">
+  <link rel="icon" href="./img/brick_icon.png">
+</head>
+
+<body>
+  <header>
+    <h1>Build&Solve</h1>
+    <div class="button-container">
+      <button id="newgame" onclick="show_init_modal()">New Game</button>
+      <button id="Retry" onclick="InitBricks()">Reset Bricks</button>
+    </div>
+  </header>
+  <div class="lightblue" id="left_bar">
+    <div class="generator-container">
+      <div class="brick green gen-brick clickable-brick straight" id="straightBrick">go straight</div>
+      <div class="brick red gen-brick clickable-brick turnL" id="leftBrick">turn left</div>
+      <div class="brick blue gen-brick clickable-brick turnR" id="rightBrick">turn right</div>
+      <div class="brick orange gen-brick clickable-brick for-brick" id="forBrick">for 2 times</div>
+      <div class="brick yellow gen-brick clickable-brick collect-brick" id="getBrick">collect coin</div>
+    </div>
+  </div>
+  <div class="brick brown start-brick" id="brick_0">PROGRAM BEGIN</div>
+  <div class="lightblue" id="right_bar">
+    <div id="coin-container"></div>
+    <div id="map-container"></div>
+    <button class="colorffcc43" id="run" onclick="run_but_click()">Start!!</button>
+  </div>
+  <div class="modal" id="Modal">
+    <div class="modal-content">
+      <div id = "init-modal">
+        <h2>Build & Solve</h2>
+        <p>Build the brick and Solve the maze!</p>
+        <div id="rules"></div>
+        <div id="rule-but-row">
+          <button id="rule-last-page" onclick="last_page()">上一頁</button>
+          <button id="rule-next-page" onclick="next_page()">下一頁</button>
+        </div>
+        <div id="start-row">
+          <button id="select-diff" onclick="select_difficulty()">開始拚積木!</button>
+          <button id="but-easy" class="but-diff" onclick="gameStart(3)">簡單</button>
+          <button id="but-normal" class="but-diff" onclick="gameStart(5)">普通</button>
+          <button id="but-hard" class="but-diff" onclick="gameStart(7)">困難</button>
+        </div>
+      </div>
+      <div id = "finish-modal">
+        <span class="close" onclick="close_modal()">&times;</span>
+        <figure>
+          <img src="./img/congratulations.png" id="congratulations" alt="Congratulations!!">
+        </figure>
+        <div class="fin-coin-row">
+          <p>蒐集到的硬幣：</p>
+          <div id="fin-coin-container"></div>
+        </div>
+        <button onclick="show_init_modal()">再玩一次</button>
+      </div>
+    </div>
+  </div>
+  <script src="final-110550105.js"></script>
+  
+
+</body>
+
+</html>

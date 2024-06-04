@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Wordle</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="hw5-110550105.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Wordle</h1>
+        </header>
+        <div class="info_bar">
+            <button class="newgame_button" onclick="initialize()">New Game</button>
+            <button class="rule_button" onclick="show_rules()">Rule</button>
+            <button class="replay_button" onclick="retry()">Retry</button>
+        </div>
+        <div id="guess_zone">
+            <p>AAAAAA</p>
+            <p>BBBBBB</p>
+            <p>CCCCCC</p>
+            <p>DDDDDD</p>
+            <p>EEEEEE</p>
+            <p>FFFFFF</p>
+        </div>
+        <div id="virtual_keyboard">
+            <!-- generate by js -->
+        </div>
+    </div>
+    <!-- The modal -->
+    <div id="rules_modal" class="modal">
+        <div class="modal-content">
+            <span class="close_btn">&times;</span>
+            <div>
+                <image src="./img/rule.png" alt="rule">
+            </div>
+            
+        </div>
+    </div>
+    <!-- The modal -->
+    <div id="endgame_modal" class="modal">
+        <div class="modal-content">
+            <div class="win">
+                <h2>Congratulations!!</h2>
+                <p>It took you x guesses to win, you are the top x% player!</p>
+                <button class="newgame_button" onclick="initialize()">New Game</button>
+            </div>
+            <div class="lose">
+                <h2>Oh No</h2>
+                <div class="lose_btn_group">
+                    <button class="newgame_button" onclick="initialize()">New Game</button>
+                    <button class="replay_button" onclick="retry()">Retry</button>
+                </div>
+                <button class="answer_button" onclick="show_answer()">Show Answer:<span class="answer_cover">&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;</span></button>
+            </div>
+        </div>
+    </div>
+    <script src="hw5-110550105.js"></script>
+</body>
+
+</html>

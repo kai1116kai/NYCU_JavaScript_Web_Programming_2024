@@ -1,0 +1,227 @@
+body {
+    display: flex;
+    justify-content: center;
+    /* Horizontally center content */
+}
+
+h1 {
+    text-align: center;
+}
+
+header {
+    margin-bottom: 8px;
+}
+
+.container {
+    width: 500px;
+    display: block;
+    background-color: white;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    /* Arrange items horizontally */
+    justify-content: center;
+    /* Horizontally center items within the row */
+}
+
+button:hover {
+    background-color: #b0b0b0;
+}
+
+.guess {
+    width: 60px;
+    height: 60px;
+    margin: 3px;
+    font-size: 30px;
+    background-color: white;
+    display: flex;
+    /* Enable flexbox */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+    border: 2px solid #787c7e;
+    color: black;
+}
+
+.guess_wrong {
+    background-color: #787c7e;
+    border-color: #787c7e;
+    color: white;
+}
+
+.guess_part_correct {
+    background-color: #c9b458;
+    border-color: #c9b458;
+    color: white;
+}
+
+.guess_correct {
+    background-color: #6aaa64;
+    border-color: #6aaa64;
+    color: white;
+}
+
+.replay {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    /* Center content horizontally */
+}
+
+.info_bar {
+    height: 40px;
+    display: flex;
+    /* Enable flexbox */
+    justify-content: center;
+    /* Center content horizontally */
+}
+
+.info_bar button {
+    margin: 0 10px;
+    width: 100px;
+    height: 30px;
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+    border-radius: 7px;
+    border-width: 1px;
+}
+
+#guess_zone {
+    margin-bottom: 10px;
+}
+
+.key {
+    width: 42px;
+    height: 55px;
+    margin: 2px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    border-radius: 7px;
+    border-width: 1px;
+    color: black;
+}
+
+#key_ENTER {
+    width: 65px;
+    font-size: 12px;
+}
+
+#key_BACKSPACE {
+    width: 65px;
+    font-size: 28px;
+}
+.key:hover {
+    background-color: #b0b0b0;
+}
+
+.key_wrong {
+    background-color: #787c7e;
+    color: white;
+}
+.key_wrong:hover {
+    background-color: #494b4d;
+}
+
+.key_part_correct {
+    background-color: #c9b458;
+    color: white;
+}
+
+.key_part_correct:hover {
+    background-color: #948541;
+}
+
+.key_correct {
+    background-color: #6aaa64;
+    color: white;
+}
+
+.key_correct:hover {
+    background-color: #4f804b;
+}
+
+
+/* Hide the modal by default */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    /* Ensure modal appears on top of other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 7% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    /* Limit the maximum width of the modal content */
+}
+
+/* Close button */
+.close_btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close_btn:hover,
+.close_btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#endgame_modal .modal-content {
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+#endgame_modal .modal-content h2 {
+    font-size: 30px;
+}
+
+#endgame_modal .modal-content p {
+    font-size: 16px;
+    font-style: italic;
+}
+
+#endgame_modal .modal-content button {
+    width: 100px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    border-width: 1px;
+    margin: 2px;
+}
+
+.lose_btn_group{
+    margin-bottom: 3px;
+}
+
+.lose .answer_button_clicked {
+    background-color: #b0b0b0;
+}
+
+#endgame_modal .modal-content .answer_button {
+    width: 210px;
+}
+
+

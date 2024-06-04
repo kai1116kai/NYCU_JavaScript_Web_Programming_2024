@@ -1,0 +1,45 @@
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 30px;
+
+}
+
+.lottery-box {
+    border: 2px solid black;
+    padding: 30px;
+    text-align: center;
+}
+
+.numbers {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.num {
+    margin: 0 5px;
+    font-size: 30px;
+    background-color: yellow;
+    border-radius: 50%;
+    width: 40px; /* 因為兩邊都有 20px 的 margin，所以設置 width 為 40px */
+    height: 40px; /* 因為兩邊都有 20px 的 margin，所以設置 height 為 40px */
+}
+
+#draw_button {
+    margin-top: 10px;
+    font-size: 16px;
+}

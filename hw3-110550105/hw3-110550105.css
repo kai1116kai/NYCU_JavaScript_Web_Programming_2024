@@ -1,0 +1,47 @@
+#tables {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    float: left;
+}
+#tables::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+#result {
+    justify-content: center;
+    margin-top: 20px;
+}
+.container {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: flex-start;
+}
+
+.table {
+    border-collapse: collapse; /* 合併邊框 */
+    border: 1px solid black; /* 表格邊框線 */
+    display: inline-block;
+    margin-right: 10px; /* 設置表格之間的間距 */
+    margin-bottom: 10px;
+}
+td {
+    border: 1px solid black; /* 單元格邊框線 */
+    padding: 5px; /* 單元格內邊距 */
+}
+tr.table_title {
+    background-color: #C0f0ff; /* 表頭背景色 */
+}
+tr:not(.table_title) {
+    text-align: center;
+    background-color: #A0f0ff; /* 背景色 */
+}
+#ans {
+    display: block;
+}
+#guess_button {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+}

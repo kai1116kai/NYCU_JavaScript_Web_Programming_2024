@@ -1,0 +1,153 @@
+body{
+    background-color: #7FFDB7;
+    font-family: Microsoft JhengHei, sans-serif;
+
+}
+h1{
+    font-size: 30px;
+    color: #000000;
+    margin-left: 10%;
+}
+h2{
+    font-size: 20px;
+    color: #3f3f3f;
+
+}
+.info_row{
+    display: flex;
+    margin-bottom: 10px;
+}
+.bottom_row{
+    display: flex;
+    margin-bottom: 10px;
+}
+.left_col{
+    float: left;
+    width: 33.33%;
+    background-color: #f0f0f0;
+    border-right: 2px solid #d0d0d0;
+}
+.right_col{
+    float: left;
+    width: 66.67%;
+    background-color: #f0f0f0;
+    border-right: 1px solid #d0d0d0;
+    position: relative;
+}
+ul.menu{
+    display: inline-block;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 13px;
+	margin: 0;
+	list-style: none;
+	padding: 0;
+}
+ul.menu li{
+    position: relative;
+	white-space: nowrap;
+	border-right: #BDEC8B 1px solid;
+    list-style-type: none;
+}
+ul.menu li a{
+    display: block;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+}
+
+ul.menu li a:hover{
+    background-color: #D9FBB5;
+}
+
+ul.menu li ul{
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    background-color: #f0f0f0;
+    border: #ccc 1px solid;
+    border-color: #BDEC8B;
+    opacity: 0;
+    visibility: hidden;
+}
+
+ul.menu li:hover ul{
+    opacity: 1;
+	visibility: visible;
+}
+
+ul.menu li:hover > a {
+    background-color: #D9FBB5;
+}
+
+.block{
+    background-color: #f0f0f0;
+    display: table;
+    clear: both;
+    border:#f5f5f5 2px solid;
+    width: 100%;
+    margin: 2px auto;
+    margin-bottom: 10px;
+}
+.right_col .block{
+    width: 95%;
+}
+.block::before .block::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.info_row:after{
+    clear:both
+}
+figure{
+    width:60%;
+}
+img{
+    width:100%;
+}
+figcaption {
+    text-align: center;
+}
+footer{
+    background-color: #BAEED1;
+}
+
+@media screen and (max-width: 800px){
+    figure{
+        width:80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 750px){
+    h1{
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .info_row{
+        display: block;
+    }
+    .left_col{
+        width: 100%;
+        border-right: none;
+    }
+    .right_col{
+        width: 100%;
+    }
+    .block{
+        width: 100%;
+    }
+    h1{
+        font-size: 30px;
+    }
+    ul.menu li ul {
+        z-index: 999; /* 设置子菜单的层叠顺序，使其位于顶部 */
+    }
+}
+
+@media screen and (max-width: 270px){
+    h1{
+        font-size: 23px;
+    }
+}
