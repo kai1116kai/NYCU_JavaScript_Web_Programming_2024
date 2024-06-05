@@ -777,6 +777,10 @@ function InitAll() {
     run_button.style.left = (mid_block_pos.x - 150 / 2) + 'px';
     run_button.style.top = Math.max((mid_block_pos.y * 2), mid_block_pos.y + 270) + 'px';
     run_button.style.display = 'block';
+    run_button.textContent = 'Start!!';
+    run_button.disabled = false;
+    if (run_button.classList.contains('color00aaaa')) run_button.classList.remove('color00aaaa');
+    if (!run_button.classList.contains('colorffcc43')) run_button.classList.add('colorffcc43');
     let coin_container = document.getElementById('coin-container');
     coin_container.style.top = ((-Math.floor(map_size/2)*45 + mid_block_pos.y)/2) + 'px';
     while (coin_container.firstChild) {
