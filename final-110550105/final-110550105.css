@@ -260,7 +260,7 @@ img {
 }
 
 .red {
-    background-color: red;
+    background-color: rgb(252, 55, 55);
 }
 
 .blue {
@@ -268,7 +268,7 @@ img {
 }
 
 .green {
-    background-color: green;
+    background-color: rgb(114, 222, 114);
 }
 
 .brown {
@@ -283,12 +283,20 @@ img {
     background-color: yellow;
 }
 
+.purple {
+    background-color: #cd61cd;
+}
+
 .colorffcc43 {
     background-color: #ffcc43;
 }
 
 .color00aaaa {
     background-color: #00aaaa;
+}
+
+.colortemp {
+    background-color: #888;
 }
 
 .but_disabled {

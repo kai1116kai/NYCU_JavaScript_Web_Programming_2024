@@ -748,6 +748,7 @@ function InitMap() {
 }
 
 function InitBricks() {
+    if (now_running) return;
     for (let i = 1; i < Brick_list.length; i++) {
         let tmp = document.getElementById(Brick_list[i].id);
         if (tmp != null) {
@@ -764,6 +765,7 @@ function InitBricks() {
 }
 
 function InitAll() {
+    if (now_running) return;
     InitBricks();
     map = [];
     map_pos = [];
@@ -844,6 +846,7 @@ function select_difficulty() {
 }
 
 function show_init_modal() {
+    if (now_running) return;
     let modal = document.getElementById('Modal');
     modal.style.display = 'block';
     let initmodal = document.getElementById('init-modal');
